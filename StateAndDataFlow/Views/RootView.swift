@@ -18,7 +18,9 @@ struct RootView: View {
                 LoginView()
             }
         }.environmentObject(userSettings)
-    }
+    }// При нажатии на кнопку LogOut, переходит на экран логина, если приложение закрыть
+    // и снова открыть то я все также на экране логина. Но если перезапустить симулятор
+    // я на экране таймера. Что тут не так может быть?
 }
 
 struct RootView_Previews: PreviewProvider {

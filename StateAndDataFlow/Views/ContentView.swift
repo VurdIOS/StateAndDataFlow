@@ -15,15 +15,29 @@ struct ContentView: View {
         VStack {
             Text("Hi, \(userSettings.name)")
                 .font(.largeTitle)
-                .padding(.top, 100)
+                .padding(.top, 80)
             Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
+            
+            TimerButtonView(
+                action: timer.startTimer,
+                color: .red,
+                text: timer.buttonTitle
+            )
+                .padding(.top, 50)
+            
             Spacer()
             
-            ButtonView(timer: timer)
-            
-            Spacer()
+            TimerButtonView(
+                action: {
+                    userSettings.isLoggedIn = false
+                },
+                color: .blue ,
+                text: "LogOut"
+            )
+                .environmentObject(userSettings)
+
         }
         .padding()
     }
@@ -33,26 +47,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(UserSettings())
-    }
-}
-
-struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
-    
-    var body: some View {
-        
-        Button(action: timer.startTimer) {
-            Text(timer.buttonTitle)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(.red)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.black, lineWidth: 4)
-        )
     }
 }
