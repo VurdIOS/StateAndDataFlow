@@ -20,12 +20,26 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .padding(.top, 100)
             
-            TimerButtonView(timer: timer)
+            TimerButtonView(
+                action: timer.startTimer,
+                color: .red,
+                text: timer.buttonTitle
+            )
                 .padding(.top, 50)
+            
+            Spacer()
+            
+            TimerButtonView(
+                action: {
+                    userSettings.isLoggedIn = false
+                },
+                color: .blue ,
+                text: "LogOut"
+            )
+                .environmentObject(userSettings)
 
         }
         .padding()
-//        .environmentObject(timer)  Тут не уверен что его нужно отправлть в окружение и без него работает
     }
 }
 
