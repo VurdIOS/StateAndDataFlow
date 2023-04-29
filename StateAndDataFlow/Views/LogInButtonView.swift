@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LogInButtonView: View {
     let action: () -> Void
-    @Binding var enable: String
+    let enable: String 
     
     var body: some View {
         Button(action: action) {
@@ -19,10 +19,11 @@ struct LogInButtonView: View {
             }.disabled(enable.count < 3)
         }
     }
-    
+}
 //    struct LogInButton_Previews: PreviewProvider {
+//        @State private var string = "Kamal"
 //        static var previews: some View {
-//            LogInButton()
+//            LogInButtonView(action: {}, enable: $string)
 //        }
 //    }
-}
+

@@ -9,3 +9,5 @@ struct User {
     let name: String
     let isLogIn: Bool
 }
+
+// Не Используется

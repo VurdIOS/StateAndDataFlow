@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TextFieldCounterView: View {
-    @Binding var text: String
+    let text: String //Здесь очень хочется вписать @Binding, по логике свойство влияет на интерфейс, и оно не первичное... Но работает без этого и икскод не ругается.
     
     var body: some View {
         Text(text.count.formatted())
@@ -18,6 +18,6 @@ struct TextFieldCounterView: View {
 
 struct TextFieldCounterView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldCounterView(text: .constant("dvzv"))
+        TextFieldCounterView(text: "Kamal")
     }
 }

@@ -11,6 +11,7 @@
 		3A2D012129FD33FF00F6414D /* LogInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D012029FD33FF00F6414D /* LogInButtonView.swift */; };
 		3A2D012529FD395000F6414D /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D012429FD395000F6414D /* TimerButtonView.swift */; };
 		3A2D012729FD404000F6414D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D012629FD404000F6414D /* User.swift */; };
+		3A2D012E29FD673700F6414D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D012D29FD673700F6414D /* StorageManager.swift */; };
 		A8B1C6E029F9881C00967803 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1C6DF29F9881C00967803 /* StateAndDataFlowApp.swift */; };
 		A8B1C6E229F9881C00967803 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1C6E129F9881C00967803 /* ContentView.swift */; };
 		A8B1C6E429F9881D00967803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8B1C6E329F9881D00967803 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		3A2D012029FD33FF00F6414D /* LogInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButtonView.swift; sourceTree = "<group>"; };
 		3A2D012429FD395000F6414D /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
 		3A2D012629FD404000F6414D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3A2D012D29FD673700F6414D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		A8B1C6DC29F9881C00967803 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B1C6DF29F9881C00967803 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
 		A8B1C6E129F9881C00967803 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,44 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		3A2D012929FD668A00F6414D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1C6F329F9A97600967803 /* RootView.swift */,
+				A8B1C6EF29F9A7B200967803 /* LoginView.swift */,
+				3A2D012029FD33FF00F6414D /* LogInButtonView.swift */,
+				3A2D011E29FD2FDA00F6414D /* TextFieldCounterView.swift */,
+				A8B1C6E129F9881C00967803 /* ContentView.swift */,
+				3A2D012429FD395000F6414D /* TimerButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A2D012A29FD66AA00F6414D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1C6DF29F9881C00967803 /* StateAndDataFlowApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3A2D012B29FD66D800F6414D /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1C6ED29F9A14400967803 /* TimeCounter.swift */,
+				A8B1C6F129F9A89300967803 /* UserSettings.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		3A2D012C29FD670200F6414D /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				3A2D012D29FD673700F6414D /* StorageManager.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
 		A8B1C6D329F9881C00967803 = {
 			isa = PBXGroup;
 			children = (
@@ -76,16 +116,11 @@
 		A8B1C6DE29F9881C00967803 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				3A2D012C29FD670200F6414D /* StorageManager */,
+				3A2D012B29FD66D800F6414D /* Action */,
+				3A2D012A29FD66AA00F6414D /* App */,
+				3A2D012929FD668A00F6414D /* Views */,
 				3A2D012829FD404B00F6414D /* Models */,
-				A8B1C6DF29F9881C00967803 /* StateAndDataFlowApp.swift */,
-				A8B1C6F329F9A97600967803 /* RootView.swift */,
-				A8B1C6EF29F9A7B200967803 /* LoginView.swift */,
-				3A2D012029FD33FF00F6414D /* LogInButtonView.swift */,
-				3A2D011E29FD2FDA00F6414D /* TextFieldCounterView.swift */,
-				A8B1C6E129F9881C00967803 /* ContentView.swift */,
-				3A2D012429FD395000F6414D /* TimerButtonView.swift */,
-				A8B1C6ED29F9A14400967803 /* TimeCounter.swift */,
-				A8B1C6F129F9A89300967803 /* UserSettings.swift */,
 				A8B1C6E329F9881D00967803 /* Assets.xcassets */,
 				A8B1C6E529F9881D00967803 /* Preview Content */,
 			);
@@ -172,6 +207,7 @@
 			files = (
 				A8B1C6EE29F9A14400967803 /* TimeCounter.swift in Sources */,
 				3A2D012129FD33FF00F6414D /* LogInButtonView.swift in Sources */,
+				3A2D012E29FD673700F6414D /* StorageManager.swift in Sources */,
 				3A2D012529FD395000F6414D /* TimerButtonView.swift in Sources */,
 				A8B1C6E229F9881C00967803 /* ContentView.swift in Sources */,
 				A8B1C6F429F9A97600967803 /* RootView.swift in Sources */,
