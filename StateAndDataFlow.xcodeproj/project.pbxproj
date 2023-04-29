@@ -116,11 +116,11 @@
 		A8B1C6DE29F9881C00967803 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				3A2D012829FD404B00F6414D /* Models */,
 				3A2D012C29FD670200F6414D /* StorageManager */,
 				3A2D012B29FD66D800F6414D /* Action */,
 				3A2D012A29FD66AA00F6414D /* App */,
 				3A2D012929FD668A00F6414D /* Views */,
-				3A2D012829FD404B00F6414D /* Models */,
 				A8B1C6E329F9881D00967803 /* Assets.xcassets */,
 				A8B1C6E529F9881D00967803 /* Preview Content */,
 			);
