@@ -25,7 +25,7 @@ struct ContentView: View {
                 color: .red,
                 text: timer.buttonTitle
             )
-                .padding(.top, 50)
+            .padding(.top, 50)
             
             Spacer()
             
@@ -36,8 +36,6 @@ struct ContentView: View {
                 color: .blue ,
                 text: "LogOut"
             )
-                .environmentObject(userSettings)
-
         }
         .padding()
     }

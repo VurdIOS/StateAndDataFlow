@@ -20,10 +20,10 @@ struct LogInButtonView: View {
         }
     }
 }
-    struct LogInButton_Previews: PreviewProvider {
-        @State private var string = "Kamal"
-        static var previews: some View {
-            LogInButtonView(action: {}, enable: "Kamal")
-        }
+struct LogInButton_Previews: PreviewProvider {
+    @State private var string = "Kamal"
+    static var previews: some View {
+        LogInButtonView(action: {}, enable: "Kamal")
     }
+}
 
