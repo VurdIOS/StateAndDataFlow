@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TimerButtonView: View {
     
-    @ObservedObject var timer: TimeCounter
     @EnvironmentObject private var userSettings: UserSettings
+    @ObservedObject var timer: TimeCounter
     
     var body: some View {
         
@@ -42,11 +42,11 @@ struct TimerButtonView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 20)
                 .stroke(.black, lineWidth: 4)
-        ).environmentObject(userSettings)
+        )//.environmentObject(userSettings) И без этого работает
     }
 }
-struct TimerButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerButtonView()
-    }
-}
+//struct TimerButtonView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerButtonView()
+//    }
+//}

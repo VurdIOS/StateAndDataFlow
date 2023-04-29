@@ -15,16 +15,17 @@ struct ContentView: View {
         VStack {
             Text("Hi, \(userSettings.name)")
                 .font(.largeTitle)
-                .padding(.top, 100)
+                .padding(.top, 80)
             Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
             
-            ButtonView(timer: timer)
-                .padding(.top, 80)
+            TimerButtonView(timer: timer)
+                .padding(.top, 50)
 
         }
         .padding()
+//        .environmentObject(timer)  Тут не уверен что его нужно отправлть в окружение и без него работает
     }
 }
 
@@ -32,43 +33,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(UserSettings())
-    }
-}
-
-struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
-    @EnvironmentObject private var userSettings: UserSettings
-    
-    var body: some View {
-        
-        Button(action: timer.startTimer) {
-            Text(timer.buttonTitle)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(.red)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.black, lineWidth: 4)
-        )
-        
-        Spacer()
-        
-        Button(action: { userSettings.isLoggedIn = false }) {
-            Text("LogOut")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(.blue)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.black, lineWidth: 4)
-        ).environmentObject(userSettings)
     }
 }

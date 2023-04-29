@@ -20,7 +20,6 @@ struct LoginView: View {
                 TextFieldCounterView(text: $name)
             }
             LogInButtonView(action: login, enable: $name)
-                .environmentObject(userSettings) // эту строку можно удалить, пока не понимаю почему
         }
     }
     private func login() {
