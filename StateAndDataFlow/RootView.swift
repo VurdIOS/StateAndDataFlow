@@ -10,6 +10,7 @@ import SwiftUI
 struct RootView: View {
     @StateObject private var userSettings = UserSettings()
     
+    
     var body: some View {
         Group {
             if userSettings.isLoggedIn {
