@@ -38,6 +38,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ButtonView: View {
     @ObservedObject var timer: TimeCounter
+    @EnvironmentObject private var userSettings: UserSettings
     
     var body: some View {
         
@@ -54,5 +55,19 @@ struct ButtonView: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(.black, lineWidth: 4)
         )
+        
+        Button(action: { userSettings.isLoggedIn = false }) {
+            Text("LogOut")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+        }
+        .frame(width: 200, height: 60)
+        .background(.red)
+        .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(.black, lineWidth: 4)
+        ).environmentObject(userSettings)
     }
 }

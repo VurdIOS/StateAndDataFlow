@@ -20,14 +20,13 @@ struct LoginView: View {
                     Image(systemName: "checkmark.circle")
                     Text("Ok")
                 }
-            }
+            }.environmentObject(userSettings)
         }
     }
-    
     private func login() {
         if !name.isEmpty {
             userSettings.name = name
-            userSettings.isLoggedIn.toggle()
+            userSettings.isLoggedIn = true
         }
     }
 }
